@@ -1,21 +1,22 @@
-# React Lab — Week 11 class tasks
+# React Lab — Week 11 class exercises
 
-The class tasks from every Week 11 source — visual lecture, study guide, video
-lecture and the Friday slides — rebuilt as working React components.
-Same archive theme as the rest of my course work.
+Eight class exercises from Week 11, rebuilt as working React components in the same
+archive theme as the rest of my course work.
 
 **Live:** https://olimjonovziyodulloh-coder.github.io/react-lab/
 
-## Sources and tasks
+## Exercises
 
-| Source | Task | Component |
+| # | Exercise | Component |
 | --- | --- | --- |
-| Visual lecture | Lab challenge: fill in the blanks for a student card that shows your own ID | `StudentCard` |
-| Study guide | Exercise 1: profile card with a default avatar prop | `ProfileCard` |
-| Study guide | Exercise 2: notification list with conditional icons | `NotificationList` |
-| Study guide | Exercise 3: reusable card using `props.children` | `Card` |
-| Video lecture | Practice challenge: course catalog with a conditional required/elective badge | `CourseCard`, `CourseCatalog` |
-| Friday slides | Code challenge: product card with price, star rating and stock label | `ProductCard`, `ProductGrid` |
+| 01 | First component, used three times | `Greeting` |
+| 02 | Student card with name, ID and major | `StudentCard` |
+| 03 | Profile card with a default `avatarUrl` prop | `ProfileCard` |
+| 04 | Notification list with conditional icons | `NotificationList` |
+| 05 | Reusable layout component using `props.children` | `Card` |
+| 06 | Product card with price, stars and stock label | `ProductCard`, `ProductGrid` |
+| 07 | Student list rendered with `.map()` and keys | `StudentList` |
+| 08 | Conditional rendering: `null`, `&&` and ternary | `ConditionalDemo` |
 
 ## React concepts used
 
@@ -23,8 +24,9 @@ Same archive theme as the rest of my course work.
 - Props, destructuring and default prop values
 - `props.children` for layout composition
 - Lists with `.map()` and stable `key`
-- Conditional rendering (ternary) for icons and badges
-- Component composition (`Section`, `CourseCatalog`)
+- Conditional rendering with `null`, `&&` and the ternary operator
+- `useState` in `ConditionalDemo` to toggle the logged-in state
+- Component composition (`Section`, `ProductGrid`)
 
 ## Run locally
 
