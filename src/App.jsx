@@ -3,6 +3,7 @@ import ProfileCard from './components/ProfileCard';
 import NotificationList from './components/NotificationList';
 import Card from './components/Card';
 import CourseCatalog from './components/CourseCatalog';
+import ProductGrid from './components/ProductGrid';
 import Section from './components/Section';
 
 const me = {
@@ -18,8 +19,8 @@ function App() {
         <p className="eyebrow">Week 11 · React Components &amp; Props</p>
         <h1>React Lab</h1>
         <p className="subtitle">
-          The class tasks from all three Week 11 sources — visual lecture, study guide
-          and video lecture — rebuilt as working components.
+          The class tasks from every Week 11 source — visual lecture, study guide,
+          video lecture and slides — rebuilt as working components.
         </p>
         <p className="student-line">
           {me.name} · <span className="student-id">ID {me.id}</span>
@@ -75,6 +76,15 @@ function App() {
         note="CourseCard takes title, instructor, credits and required; the badge is conditional."
       >
         <CourseCatalog />
+      </Section>
+
+      <Section
+        number="04"
+        source="Friday slides"
+        title="Code challenge — ProductCard"
+        note="Name, price in KRW, a star rating out of 5, and an out-of-stock label when the product is unavailable."
+      >
+        <ProductGrid />
       </Section>
 
       <footer className="page-footer">

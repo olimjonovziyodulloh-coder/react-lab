@@ -276,6 +276,51 @@ body::before {
 .course-meta { color: #a8a29b; font-size: 0.88rem; }
 .course-credits { color: var(--gold); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.4px; }
 
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.product-card {
+  background: var(--panel-hi);
+  border: 1px solid var(--line);
+  padding: 16px 18px;
+  display: grid;
+  gap: 5px;
+  transition: border-color 0.2s;
+}
+
+.product-card:hover { border-color: var(--gold-soft); }
+
+.product-name {
+  font-family: "Rajdhani", "Arial Narrow", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.15;
+  color: #f0e6d6;
+}
+
+.product-price {
+  font-family: "Rajdhani", "Arial Narrow", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.product-stars { color: #d9a441; font-size: 0.95rem; letter-spacing: 2px; }
+.product-rating { color: #a8a29b; font-size: 0.82rem; }
+
+.stock {
+  font-family: "Rajdhani", "Arial Narrow", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.stock.in { color: #8fd4a4; }
+.stock.out { color: #f2a0a0; }
+
 .page-footer {
   margin-top: 40px;
   padding: 24px 20px;
