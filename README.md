@@ -1,6 +1,7 @@
 # React Lab — Week 11 class tasks
 
-The class tasks from all three Week 11 sources, rebuilt as working React components.
+The class tasks from every Week 11 source — visual lecture, study guide, video
+lecture and the Friday slides — rebuilt as working React components.
 Same archive theme as the rest of my course work.
 
 **Live:** https://olimjonovziyodulloh-coder.github.io/react-lab/
@@ -14,6 +15,7 @@ Same archive theme as the rest of my course work.
 | Study guide | Exercise 2: notification list with conditional icons | `NotificationList` |
 | Study guide | Exercise 3: reusable card using `props.children` | `Card` |
 | Video lecture | Practice challenge: course catalog with a conditional required/elective badge | `CourseCard`, `CourseCatalog` |
+| Friday slides | Code challenge: product card with price, star rating and stock label | `ProductCard`, `ProductGrid` |
 
 ## React concepts used
 
