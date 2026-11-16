@@ -1,9 +1,11 @@
+import Greeting from './components/Greeting';
 import StudentCard from './components/StudentCard';
 import ProfileCard from './components/ProfileCard';
 import NotificationList from './components/NotificationList';
 import Card from './components/Card';
-import CourseCatalog from './components/CourseCatalog';
 import ProductGrid from './components/ProductGrid';
+import StudentList from './components/StudentList';
+import ConditionalDemo from './components/ConditionalDemo';
 import Section from './components/Section';
 
 const me = {
@@ -19,8 +21,8 @@ function App() {
         <p className="eyebrow">Week 11 · React Components &amp; Props</p>
         <h1>React Lab</h1>
         <p className="subtitle">
-          The class tasks from every Week 11 source — visual lecture, study guide,
-          video lecture and slides — rebuilt as working components.
+          Eight class exercises, each one a small component in its own file. Every
+          card below receives its data through props.
         </p>
         <p className="student-line">
           {me.name} · <span className="student-id">ID {me.id}</span>
@@ -29,9 +31,20 @@ function App() {
 
       <Section
         number="01"
-        source="Visual lecture"
-        title="Lab challenge — StudentCard"
-        note="Fill in the blanks so the card renders name, ID and major."
+        title="Your first component"
+        note="One function used three times — each use is an independent copy."
+      >
+        <div className="greeting-row">
+          <Greeting />
+          <Greeting />
+          <Greeting />
+        </div>
+      </Section>
+
+      <Section
+        number="02"
+        title="StudentCard"
+        note="Props: name, id, major. The card shows my own student ID."
       >
         <div className="demo-grid">
           <StudentCard name={me.name} id={me.id} major={me.major} />
@@ -39,10 +52,9 @@ function App() {
       </Section>
 
       <Section
-        number="02"
-        source="Study guide"
-        title="ProfileCard, NotificationList, Card"
-        note="Three practice exercises: default props, conditional icons and props.children."
+        number="03"
+        title="ProfileCard with a default prop"
+        note="avatarUrl is optional — when it is not passed, the default avatar is used."
       >
         <div className="demo-grid">
           <ProfileCard
@@ -50,41 +62,57 @@ function App() {
             role="Professor"
             email="muhiddin@gachon.ac.kr"
           />
-          <div className="demo-block">
-            <h3 className="demo-title">Notifications</h3>
-            <NotificationList />
-          </div>
-          <div className="demo-block">
-            <Card title="Lecture topics">
-              <ul className="plain-list">
-                <li>Components</li>
-                <li>Props</li>
-                <li>Lists &amp; conditional rendering</li>
-              </ul>
-            </Card>
-            <Card title="Homework">
-              <p>Build a student portfolio component.</p>
-            </Card>
-          </div>
         </div>
       </Section>
 
       <Section
-        number="03"
-        source="Video lecture"
-        title="Practice challenge — Course catalog"
-        note="CourseCard takes title, instructor, credits and required; the badge is conditional."
+        number="04"
+        title="List of notifications"
+        note="Rendered with .map() and a key from each id; the icon comes from conditional rendering."
       >
-        <CourseCatalog />
+        <NotificationList />
       </Section>
 
       <Section
-        number="04"
-        source="Friday slides"
-        title="Code challenge — ProductCard"
-        note="Name, price in KRW, a star rating out of 5, and an out-of-stock label when the product is unavailable."
+        number="05"
+        title="Layout with props.children"
+        note="The same Card component wraps two completely different pieces of content."
+      >
+        <div className="demo-block">
+          <Card title="Lecture topics">
+            <ul className="plain-list">
+              <li>Components</li>
+              <li>Props</li>
+            </ul>
+          </Card>
+          <Card title="Homework">
+            <p>Build a student portfolio component.</p>
+          </Card>
+        </div>
+      </Section>
+
+      <Section
+        number="06"
+        title="ProductCard"
+        note="Props: name, price in KRW, rating out of 5, inStock. Both bonuses are done."
       >
         <ProductGrid />
+      </Section>
+
+      <Section
+        number="07"
+        title="Rendering a list with keys"
+        note="Every item has a unique, stable key — its id, not its position in the array."
+      >
+        <StudentList />
+      </Section>
+
+      <Section
+        number="08"
+        title="Conditional rendering"
+        note="A component can return null, && shows a part only when its condition is true, and a ternary picks between two labels."
+      >
+        <ConditionalDemo />
       </Section>
 
       <footer className="page-footer">
